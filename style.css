@@ -1,0 +1,404 @@
+@font-face {
+    font-family: 'smeshariki';
+    src: url('fonts/smeshariki.ttf');
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(25, 25, 104);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --transfX: 0px;
+}
+
+.number {
+    font-family: 'smeshariki';
+    font-size: 22px;
+    color: rgb(255, 146, 29);
+    font-style: italic;
+    padding-right: 15px;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0), 1px 1px 3px rgb(255, 255, 255), 1px 1px 3px rgb(255, 0, 0);
+}
+
+/* ---Лого---   */
+.logo {
+    width: 150px;
+}
+
+/* ---ДОП КЛАССЫ--- */
+.no {
+    display: none;
+}
+
+.highlight {
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px rgb(255, 166, 0), 1px 1px 3px rgb(255, 255, 255), 1px 1px 3px rgb(255, 0, 0);
+}
+
+.you_here {
+    transform: scale(1.1);
+    text-shadow: 1px 1px 3px orange, 1px 1px 4px rgb(255, 255, 255), 1px 1px 5px rgb(255, 0, 0);
+}
+
+.blue_box_blur {
+    
+    max-width: 600px;
+    border: double rgb(11, 98, 156) 10px;
+    background-color: rgba(255, 255, 255, 0.44);
+    backdrop-filter: blur(10px);
+    padding: 10px 10px 10px 10px;
+    margin:20px 20px 0 0;
+}
+
+
+/* ---Шапка сайта--- */
+.header_container {
+    font-family: 'smeshariki';
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    height: 100px;
+    padding: 5px;
+    background-color: rgb(255, 255, 0);
+}
+
+.header_container>a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.header_container>a:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+.header_container button {
+    font-family: 'smeshariki';
+
+    color: rgb(25, 25, 104);
+    font-size: 20px;
+    height: 100%;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.button:hover,
+.header_container button:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+
+.account button,
+.button {
+    font-family: 'smeshariki';
+    text-transform: uppercase;
+
+    background-color: orange;
+    font-size: 16px;
+    color: rgb(25, 25, 104);
+    border: rgb(25, 25, 104) solid 2px;
+    border-radius: 10px;
+    padding: 4px;
+
+    transition: all 0.2s ease;
+}
+
+/* ---Личный кабинет в шапке--- */
+.account {
+    float: right;
+}
+
+.photo_person {
+    width: 30px;
+    height: 30px;
+}
+
+/* ---Основное содержимое--- */
+main {
+
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 20px 80px 20px;
+
+    color: rgb(5, 5, 21);
+    text-shadow: 1px 1px 3px rgb(255, 255, 255), 1px 1px 4px rgb(119, 117, 255), 1px 1px 5px rgb(255, 255, 255);
+
+    background-image: url('photos/fon-ink-main.svg');
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h2 {
+    font-family: 'smeshariki';
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 146, 29);
+    font-style: italic;
+    padding: 1em 2em 1em;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0), 1px 1px 3px rgb(255, 255, 255), 1px 1px 3px rgb(255, 0, 0);
+}
+
+/* ---Главная--- */
+
+.wrapper-mainpage {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+
+/* ---Словарь--- */
+.wrapper_dictionary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+}
+
+
+.button_dictionary>#search_btn {
+    width: 20%;
+    height: 30px;
+}
+
+.button_dictionary>input[type=text] {
+    width: 60%;
+    height: 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-color: rgb(11, 98, 156);
+}
+
+ol {
+    text-align: left;
+    padding-left: 30px;
+}
+
+
+.vyvod {
+    text-align: left;
+}
+
+
+#the_word {
+    font-size: large;
+    text-align: left;
+    color: orange;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0), 1px 1px 3px rgb(255, 255, 255), 1px 1px 3px rgb(255, 0, 0);
+    font-weight: bold;
+    padding: 1em 2em 1em;
+}
+
+#meaning_word {
+    text-align: left;
+    padding: 0px 10px 0px 10px;
+}
+
+/*---галерея ---*/
+.body-gal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main_gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+}
+.wrapper_gallery {
+    width: 300px;
+    display: flex;
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    transition: 1s;
+    transform: translateX(var(--transfX));
+}
+.def_gal {
+    transition: 1s;
+    overflow: hidden;
+}
+
+.img_gal {
+    width: 300px;
+    height: 300px;
+}
+.buttons_gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    transition: 1s;
+    position: relative;
+    top: -210px;
+
+    margin-bottom: 0;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* ---Тест--- */
+.wrapper-test {
+    padding: 10px;
+    justify-content: space-around;
+    display: flex;
+}
+
+.def {
+    padding: 5px;
+    width: 500px;
+    height: auto;
+    display: flex;
+    border: double rgb(11, 98, 156) 10px;
+    background-color: rgba(255, 255, 255, 0.44);
+    backdrop-filter: blur(10px);
+    border-radius: 3%;
+
+}
+
+.test {
+    margin-top: 5px;
+}
+
+form {
+    text-align: left;
+}
+
+#test_res_check_answ {
+    padding-top: 5px;
+    text-align: left;
+}
+
+form fieldset {
+    padding: 2px;
+}
+
+/* ---Личный кабинет--- */
+.smesharik_data,
+.test_res_all {
+    margin: 0 0 10px 0;
+    text-align: left;
+    padding: 0px 0px 10px 10px;
+}
+
+/* ---солнце--- */
+.sun {
+    width: 60px;
+}
+
+.wrapper-sun {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2);
+
+}
+
+.card {
+    margin: 0.5em;
+
+}
+
+.card>img {
+    display: inline-block;
+    margin-right: 10px;
+    width: 80%;
+}
+
+
+
+
+/* ---Регистрация--- */
+.wrapper_registration {
+    margin-top: 10px;
+
+}
+.error {
+    color: red;
+}
+
+.registration_input {
+    width: 60%;
+    height: 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.check:invalid {
+    border-color: red;
+}
+.check:valid {
+    border-color: green;
+}
+
+.wrapper_registration {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 10px; 
+    width: 100%; 
+    max-width: 600px; 
+}
+
+
+/* ---Подвал--- */
+footer {
+    color: rgb(17, 51, 17);
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-image: url('photos/fon-footer.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-f img {
+    width: 30px;
+}
+
+.social-f a {
+    text-decoration: none;
+}
+
+.contacts_footer span {
+    color: rgb(25, 25, 104);
+}
+
+.copyright {
+    color: rgb(25, 25, 104);
+
+}
