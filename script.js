@@ -373,7 +373,7 @@ document.getElementById('check_answers').addEventListener('click', function (eve
     } 
 
     //результаты в личный кабинет
-    document.getElementById('test_results_acc').innerText = `Количество правильных ответов: ${result2} из 7` + '\n' + result_answers;
+    document.getElementById('test_results_acc').innerText = `Количество правильных ответов: ${result2} из 7`;
 
 });
 
@@ -409,7 +409,7 @@ submit_button.addEventListener('click', function (event) {
         result_for_header += 'Имя:  ' + form1.person_name.value + '\n';
         document.getElementById("log_error").innerText = '';
     } else {
-        document.getElementById("log_error").innerText = 'Имя введено неверно. (Должно начинаться с большой буквы, минимум 4 символа, только русские буквы)';
+        document.getElementById("log_error").innerText = 'Имя введено неверно.';
         test = false;
     }
 
