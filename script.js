@@ -366,8 +366,18 @@ document.getElementById('check_answers').addEventListener('click', function (eve
     document.getElementById('test_res').innerText = `Количество правильных ответов: ${result2} из 7`;
     document.getElementById('test_res_check_answ').innerText = result_answers;
 
+    //заблокировать кнопки
+    form2.krosh_name.disabled = true
+    form2.bibi_name.disabled = true
+    form2.pandi.disabled = true
+
+    // заблокировать радиокнопки
+    let radioButtons = form2.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(radio => {
+        radio.disabled = true;
+    });
+
     // кнопка перепройти тест
-    
     if (retake_test) {
         retake_test.classList.remove('no');
     } 
@@ -384,6 +394,15 @@ document.getElementById('retake_test_btn').addEventListener('click', () => {
     if (retake_test) {
         retake_test.classList.add('no');
     }
+
+    form2.krosh_name.disabled = false
+    form2.bibi_name.disabled = false
+    form2.pandi.disabled = false
+
+    let radioButtons = form2.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(radio => {
+        radio.disabled = false;
+    });
 
     document.getElementById('test_res').innerText = 'В этом блоке появятся результаты теста, когда Вы его пройдете.';
     document.getElementById('test_res_check_answ').innerText = '';
